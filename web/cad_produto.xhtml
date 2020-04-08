@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="content">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary">
+
+                    <div class="container">
+
+                        <div class="collapse navbar-collapse" id="#navbarSite">
+
+                            <form class="form-inline">
+                                <input class="form-control ml-4 mr-2" type="search" placeholder="Buscar..."/>
+                                <button class="btn btn-dark" type="submit">Ok</button>
+                            </form>
+
+                            <ul class="navbar-nav mr-auto">
+
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
+                                            Categorias
+                                        </a>
+
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Facebook</a>
+                                            <a class="dropdown-item" href="#">Twitter</a>
+                                            <a class="dropdown-item" href="#">Instagram</a>
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Ofertas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Histórico</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contato</a>
+                                </li>
+
+
+                            </ul>
+                           
+                        </div>
+
+                    </div>
+
+                </nav>
+                <div>
+                <h2 align="center">TUDO QUE VOCÊ PRECISA ESTÁ AQUI!</h2>
+                </div>
+                <div align="center">
+                <img src="https://engtrust.com.br/wp-content/uploads/2016/08/fundo-cinza-02.jpg" width="500"/>
+                <img src="https://engtrust.com.br/wp-content/uploads/2016/08/fundo-cinza-02.jpg" width="500"/>
+                </div>
+            </ui:define>
+
+
+        </ui:composition>
+
+    </body>
+</html>
