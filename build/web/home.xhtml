@@ -12,20 +12,21 @@
             <nav>
                 <h:panelGrid columns="2">
                     ID:
-                    <h:inputText id="txtid" size="10" class="form-control ml-4 mr-2"/>
+                    <h:inputText id="txtid" size="10" class="form-control ml-4 mr-2" />
                     Nome:
-                    <h:inputText id="txtnome" size="50" class="form-control ml-4 mr-2"/>
+                    <h:inputText id="txtnome" size="50" class="form-control ml-4 mr-2" value="#{usuarioMBean.usuario.nome}"/>
                     E-Mail:
-                    <h:inputText id="txtemail" size="50" class="form-control ml-4 mr-2"/>
+                    <h:inputText id="txtemail" size="50" class="form-control ml-4 mr-2" value="#{usuarioMBean.usuario.email}"/>
                     Usuário:
-                    <h:inputText id="txtusuario" size="10" class="form-control ml-4 mr-2"/>
+                    <h:inputText id="txtusuario" size="10" class="form-control ml-4 mr-2" value="#{usuarioMBean.usuario.userName}"/>
                     Senha:
-                    <h:inputSecret id="txtsenha" size="10" class="form-control ml-4 mr-2"/>
+                    <h:inputSecret id="txtsenha" size="10" class="form-control ml-4 mr-2" value="#{usuarioMBean.usuario.senha}"/>
                 </h:panelGrid>
                 <br/>
 
                 <h:panelGrid>
-                    <button class="btn btn-dark" type="submit">Salvar</button>
+                    <h:commandButton class="btn btn-dark" value="Salvar" action="#{usuarioMBean.botaoSalvar()}" />
+                    <h:commandButton class="btn btn-dark" value="Pesquisar" action="consUsuario?faces-redirect=true" />
                 </h:panelGrid>
             </nav>
         </h:form>
