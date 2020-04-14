@@ -14,20 +14,20 @@
                 <h:form>
                     <h:panelGrid columns="2">
                         Nome
-                        <h:inputText id="iTxtNome" size="50"/>
+                        <h:inputText id="iTxtNome" size="50" value="#{produtoMBean.produto.nome}"/>
                         Unidade de Medida
-                        <h:selectOneMenu>
-                            <f:selectItem itemValue="UN" itemLabel="UN"/>
-                            <f:selectItem itemValue="KG" itemLabel="KG"/>
+                        <h:selectOneMenu id="sMnUnidadeMedida" value="#{produtoMBean.produto.unidadeMedida}">
+                            <f:selectItems value="#{produtoMBean.listaUnidadeMedida}" var="unidadeMedida"
+                                           itemValue="#{unidadeMedida.unidadeMedida}" itemLabel="#{unidadeMedida.unidadeMedida}"/>
                         </h:selectOneMenu>
                         Preço de Custo
-                        <h:inputText id="iTxtPrecoCusto" size="10"/>
+                        <h:inputText id="iTxtPrecoCusto" size="10" value="#{produtoMBean.produto.precoCusto}"/>
                         Margem de Lucro %
-                        <h:inputText id="iTxtMargemLucro" size="10"/>
+                        <h:inputText id="iTxtMargemLucro" size="10" value="#{produtoMBean.produto.margemLucro}"/>
                         Preço de Venda
-                        <h:inputText id="iTxtPrecoVenda" size="10"/>
+                        <h:inputText id="iTxtPrecoVenda" size="10" value="#{produtoMBean.produto.precoVenda}"/>
                     </h:panelGrid>
-                    <h:commandButton value="Salvar"/>
+                    <h:commandButton value="Salvar" action="#{produtoMBean.botaoSalvar()}"/>
                 </h:form>    
             </ui:define>
 
