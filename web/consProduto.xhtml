@@ -17,9 +17,10 @@
             </h:panelGrid>
             <h:panelGrid>
                 <h:dataTable value="#{produtoMBean.listaProdutos}" var="produto"
-                             styleClass="table"
-                             headerClass="tableHeader"
-                             rowClasses="tableOddRow, tableEvenRow">
+                             styleClass="tabela"
+                             headerClass="tabelaCabecalho"
+                             columnClasses="tabelaColunaId, tabelaColuna250px, tabelaColunaNumerica, tabelaColunaAcoes"
+                             rowClasses="tabelaLinha1, tabelaLinha2">
                     <h:column>
                         <f:facet name="header">ID</f:facet>
                         #{produto.ID}
@@ -34,6 +35,7 @@
                     </h:column>
                     <h:column>
                         <f:facet name="header">Ações</f:facet>
+                        <h:commandButton value="Editar"/>
                         <h:commandButton value="Apagar"/>
                     </h:column>
                 </h:dataTable>

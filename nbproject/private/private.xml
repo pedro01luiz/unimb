@@ -3,11 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/src/java/controller/ProdutoMBean.java</file>
+            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/web/resources/css/default.css</file>
+            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/web/consUsuario.xhtml</file>
+            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/web/index.xhtml</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/web/consProduto.xhtml</file>
+            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/src/java/uteis/UnidadeMedida.java</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/web/cabecalho.xhtml</file>
+            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/src/java/br/com/sige/entidade/Produto.java</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/web/cad_produto.xhtml</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/web/home.xhtml</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/web/cad_cliente.xhtml</file>
+            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/src/java/controller/UsuarioMBean.java</file>
+            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/web/cad_estoque.xhtml</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/sige/web/template.xhtml</file>
         </group>
     </open-files>

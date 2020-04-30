@@ -5,21 +5,42 @@
  */
 package br.com.sige.entidade;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Objects;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import uteis.UnidadeMedida;
 
 /**
  *
  * @author Pedro
  */
-public class Produto {
+@Entity
+@Table(name = "produto", schema = "sige")
+public class Produto implements Serializable {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
+    @Column(name = "nome", length = 200, nullable = false)
     private String nome;
+    @Column(name = "unidade_medida", length = 2)
+    @Enumerated(EnumType.STRING)
     private UnidadeMedida unidadeMedida;
+    @Column(name = "estoque")
     private BigDecimal estoque;
+    @Column(name = "preco_custo")
     private BigDecimal precoCusto;
+    @Column(name = "margem_lucro")
     private BigDecimal margemLucro;
+    @Column(name = "preco_venda")
     private BigDecimal precoVenda;
 
     public Long getID() {
@@ -77,6 +98,32 @@ public class Produto {
     public void setPrecoVenda(BigDecimal precoVenda) {
         this.precoVenda = precoVenda;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 89 * hash + Objects.hashCode(this.ID);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Produto other = (Produto) obj;
+        if (!Objects.equals(this.ID, other.ID)) {
+            return false;
+        }
+        return true;
+    }
+    
     
     
 }
