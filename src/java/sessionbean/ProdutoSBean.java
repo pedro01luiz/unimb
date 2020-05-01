@@ -6,9 +6,11 @@
 package sessionbean;
 
 import br.com.sige.entidade.Produto;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -22,6 +24,22 @@ public class ProdutoSBean {
     
     public void salvar(Produto produto) {
         em.merge(produto);
+    }
+    
+    public void excluir(Produto produto) {
+        em.remove(em.find(Produto.class, produto.getID()));
+    }
+    
+    public Produto pesquisar(Long id) {
+        return em.find(Produto.class, id);
+    }
+    
+    public List<Produto> pesquisar(String valorPesquisa) {
+        List<Produto> listaProduto;
+        Query consulta = em.createNamedQuery("Produto.findByName");
+        consulta.setParameter("nome", valorPesquisa + "%");
+        listaProduto = consulta.getResultList();
+        return listaProduto;
     }
     
 }

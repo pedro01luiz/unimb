@@ -15,6 +15,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import uteis.UnidadeMedida;
 
@@ -24,6 +26,12 @@ import uteis.UnidadeMedida;
  */
 @Entity
 @Table(name = "produto", schema = "sige")
+@NamedQueries({
+    @NamedQuery(
+            name = "Produto.findByName",
+            query = "SELECT p FROM Produto p WHERE p.nome LIKE :nome"
+    )
+})
 public class Produto implements Serializable {
     
     @Id

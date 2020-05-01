@@ -14,7 +14,8 @@ public enum UnidadeMedida {
     KG("KG"),
     M("M"),
     L("L"),
-    CX("CX");
+    CX("CX"),
+    UN("UN");
     
     private String unidadeMedida;
     

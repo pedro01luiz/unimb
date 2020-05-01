@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
+import sessionbean.ProdutoSBean;
 import uteis.UnidadeMedida;
 
 /**
@@ -30,6 +32,9 @@ public class ProdutoMBean implements Serializable {
     private List<Produto> listaProdutos;
     
     private List<UnidadeMedida> listaUnidadeMedida;
+    
+    @EJB
+    private ProdutoSBean produtoSBean;
 
     public ProdutoMBean() {
         
@@ -43,14 +48,24 @@ public class ProdutoMBean implements Serializable {
     }
     
     public void botaoPesquisar() {
-        
+        listaProdutos = produtoSBean.pesquisar(parametroPesquisa);
         
     }
     
     public String botaoSalvar () {
-        listaProdutos.add(produto);
+        produtoSBean.salvar(produto);
         produto = new Produto();
         return "consProduto?faces-redirect=true";
+    }
+    
+    public void botaoExcluir () {
+        produtoSBean.excluir(produto);
+        produto = new Produto();
+    }
+    
+    public String botaoEditar () {
+        
+        return "cad_produto?faces-redirect=true";
     }
 
     public Produto getProduto() {

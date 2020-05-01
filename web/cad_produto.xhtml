@@ -20,6 +20,8 @@
                             <f:selectItems value="#{produtoMBean.listaUnidadeMedida}" var="unidadeMedida"
                                            itemValue="#{unidadeMedida.unidadeMedida}" itemLabel="#{unidadeMedida.unidadeMedida}"/>
                         </h:selectOneMenu>
+                        Estoque
+                        <h:inputText id="iTxtEstoque" size="10" value="#{produtoMBean.produto.estoque}"/>
                         Preço de Custo
                         <h:inputText id="iTxtPrecoCusto" size="10" value="#{produtoMBean.produto.precoCusto}"/>
                         Margem de Lucro %
