@@ -16,9 +16,9 @@
                         Nome
                         <h:inputText id="iTxtNome" size="50" value="#{produtoMBean.produto.nome}"/>
                         Unidade de Medida
-                        <h:selectOneMenu id="sMnUnidadeMedida" value="#{produtoMBean.produto.unidadeMedida}">
+                        <h:selectOneMenu id="sMnUnidadeMedida" value="#{produtoMBean.produto.unidadeMedida}" converter="#{produtoMBean.unidadeMedidaConverter}">
                             <f:selectItems value="#{produtoMBean.listaUnidadeMedida}" var="unidadeMedida"
-                                           itemValue="#{unidadeMedida.unidadeMedida}" itemLabel="#{unidadeMedida.unidadeMedida}"/>
+                                           itemValue="#{unidadeMedida}" itemLabel="#{unidadeMedida.nome}"/>
                         </h:selectOneMenu>
                         Estoque
                         <h:inputText id="iTxtEstoque" size="10" value="#{produtoMBean.produto.estoque}"/>

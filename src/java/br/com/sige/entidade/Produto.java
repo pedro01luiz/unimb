@@ -10,15 +10,15 @@ import java.math.BigDecimal;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import uteis.UnidadeMedida;
+
 
 /**
  *
@@ -39,8 +39,8 @@ public class Produto implements Serializable {
     private Long ID;
     @Column(name = "nome", length = 200, nullable = false)
     private String nome;
-    @Column(name = "unidade_medida", length = 2)
-    @Enumerated(EnumType.STRING)
+    @ManyToOne
+    @JoinColumn(name = "unidade_medida_id", referencedColumnName = "id")
     private UnidadeMedida unidadeMedida;
     @Column(name = "estoque")
     private BigDecimal estoque;
